@@ -1,9 +1,12 @@
-<mxfile host="Electron">
+<mxfile host="app.diagrams.net">
   <diagram name="Seite-1" id="3kMUS1s1H-PyBT_9mEa6">
-    <mxGraphModel dx="1114" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="803" dy="446" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="pw3GxXVJeJjqTDjmcQyN-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Relation:&amp;nbsp;Studierende[Name, Matrikelnummer, Studiengang]&lt;div&gt;Schema: Sch(Student) = (&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Name, Matrikelnummer, Studiengang&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="360" x="50" y="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
