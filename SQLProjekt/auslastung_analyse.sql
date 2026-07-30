@@ -1,3 +1,15 @@
+-- ============================================================
+--  UC2 "Auslastungsanalyse pro Raum" / US15 "Auslastung einsehen"
+--  Akteur: Gebaeudeleiter
+--  Ziel:   Auslastung je Raum und Zeitslot auswerten, um zu erkennen,
+--          ob eine Veranstaltung in einen groesseren oder kleineren
+--          Raum verlegt werden sollte.
+--
+--  Eingabewerte des Formulars:
+--    Zeitraum : 2026-06-01 bis 2026-12-31   (Zeile 27/28)
+--    Raeume   : 1, 5, 6 - alle Veranstaltungsraeume
+--               fuer einen einzelnen Raum die IN-Liste anpassen (Zeile 31)
+-- ============================================================
 SELECT
     r.RaumId,
     r.Bezeichnung AS Raum,
