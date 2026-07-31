@@ -30,9 +30,9 @@ FROM Raum r
          JOIN Veranstaltungsraum vr ON vr.RaumId = r.RaumId
          LEFT JOIN Zeitslot z ON z.RaumId = r.RaumId
     AND z.Startzeit >= unixepoch('2026-06-01 00:00:00')
-    AND z.Endzeit <= unixepoch('2026-12-31 23:59:59')
+    AND z.Endzeit <= unixepoch('2026-12-31 23:59:59') --Zeitraum Auswahl
          LEFT JOIN Event e ON e.EventId = z.EventId
          LEFT JOIN Teilnehmer_Buchung tb ON tb.EventId = e.EventId
-WHERE r.RaumId IN (1, 5, 6)
+WHERE r.RaumId IN (1, 5, 6) --Raum Auswahl
 GROUP BY r.RaumId, r.Bezeichnung, vr.Kapazitaet, z.ZeitslotId, z.Bezeichnung, z.Startzeit, z.Endzeit, e.Titel
 ORDER BY r.RaumId, z.Startzeit;

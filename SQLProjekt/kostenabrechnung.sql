@@ -5,10 +5,6 @@
 --  Rechnungsbetrag = Raummiete (Stundensatz x Nutzungsdauer)
 --                  + gebuchte Sitzplaetze (US9)
 --                  + Ersatz defekter Materialien (US16/US22)
---
---  HINWEIS: Raum hat keinen Stundensatz und Raum_Utensilie keinen Preis.
---  Die Saetze sind deshalb im Query hinterlegt: Stundensatz je Raumtyp,
---  5 EUR je Sitzplatz, 250 EUR Pauschale je Ersatzteil.
 -- ============================================================
 WITH Kosten AS (
     SELECT e.EventId,

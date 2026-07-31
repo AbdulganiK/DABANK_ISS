@@ -13,7 +13,7 @@
 BEGIN TRANSACTION;
 
 -- ------------------------------------------------------------
--- Schritt 1 (Ablauf 1-2): Basisdaten erfassen, Status 'geplant'
+-- Schritt 1 : Basisdaten erfassen, Status 'geplant'
 -- ------------------------------------------------------------
 INSERT INTO Event (EventId, VeranstalterId, Titel, Beschreibung, Status, Datum)
 VALUES (4, 5,
@@ -23,7 +23,7 @@ VALUES (4, 5,
         unixepoch('2026-11-12 09:00:00'));
 
 -- ------------------------------------------------------------
--- Schritt 2 (Ablauf 3-4): Das System schlaegt passende Raeume vor
+-- Schritt 2  Das System schlaegt passende Raeume vor
 --   - Veranstaltungsraum mit ausreichender Kapazitaet
 --   - geforderte Ausstattung vorhanden und funktionsfaehig
 --   - im Wunschzeitraum noch nicht belegt
@@ -46,7 +46,7 @@ WHERE vr.Kapazitaet >= 80
 ORDER BY vr.Kapazitaet;
 
 -- ------------------------------------------------------------
--- Schritt 3 (Ablauf 5): Zeitslot fuer den gewaehlten Raum anlegen
+-- Schritt 3 : Zeitslot fuer den gewaehlten Raum anlegen
 -- ------------------------------------------------------------
 INSERT INTO Zeitslot (ZeitslotId, Startzeit, Endzeit, Bezeichnung, RaumId, EventId)
 VALUES (5,
@@ -57,13 +57,13 @@ VALUES (5,
         4);
 
 -- ------------------------------------------------------------
--- Schritt 4 (Ablauf 7): Raum und Zeitslot fest buchen
+-- Schritt 4 : Raum und Zeitslot fest buchen
 -- ------------------------------------------------------------
 INSERT INTO Zeitslot_Buchung (ZeitslotId, EventId, Status, GebuchtAm)
 VALUES (5, 4, 'bestätigt', unixepoch('2026-08-15 12:00:00'));
 
 -- ------------------------------------------------------------
--- Schritt 5 (Ablauf 5): Speaker zuweisen
+-- Schritt 5 : Speaker zuweisen
 --   Alternativablauf "kein Speaker": Block weglassen
 -- ------------------------------------------------------------
 INSERT INTO Speaker_Belegung (EventId, SpeakerId, Rolle)
@@ -71,7 +71,7 @@ VALUES (4, 3, 'Hauptrednerin'),
        (4, 4, 'Co-Referent');
 
 -- ------------------------------------------------------------
--- Schritt 6 (Ablauf 6-8): Veroeffentlichen
+-- Schritt 6 : Veroeffentlichen
 --   Alternativablauf "nicht publizieren": Status bleibt 'geplant'
 -- ------------------------------------------------------------
 UPDATE Event
